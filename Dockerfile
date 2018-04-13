@@ -1,7 +1,13 @@
 FROM alpine:3.7
 
 ARG foo
+ARG CSI_ID
+ARG BUILD_DATE
+ARG VCS_REF
+ARG INSTALLED_SOFTWARE_LIST
 
-LABEL test="$foo"
+LABEL test='$foo
+LABEL CSI_ID='$CSI_ID'
+LABEL BUILD_DATE='$BUILD_DATE'
 
 CMD ["echo","'hello'"]
